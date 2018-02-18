@@ -1,0 +1,46 @@
+.Login {
+  text-align: center;
+}
+
+.Login-header {
+  background-color: #222;
+  height: 70px;
+  padding: 20px;
+  margin-bottom: 50px;
+  color: white;
+  text-align: center;
+}
+
+.Login-title {
+  font-size: 3.5em;
+  margin: auto;
+  text-align: center;
+}
+
+.Login-label{
+  float: left;
+  height: 29px;
+}
+
+.Login-form-box {
+  margin-left: 0px;
+  margin-right: 0px;
+  width:150px;
+  float: right;
+}
+
+.Login-field{
+  margin-bottom: 10px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Login-button{
+  margin-top: 10px;
+  width: 90px;
+}
+
+.Login-create-account-button{
+  margin-left: 20px;
+}
