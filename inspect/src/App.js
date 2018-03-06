@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router,Switch, Route, Link, Redirect } from "react-router-dom";
 import logo from './logo.svg';
 import team_logo from './inSpect-logo.svg';
 import './App.css';
 import './CreateAccount.css';
+import {Login} from './Login.js';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <div>
+      <Route exact path="/" component={CreateAccount} />
+
+      <Route path="/login" component={Login} />
+    </div>
+  </Router>
+);
+
 
 class CreateAccount extends Component {
 	constructor(props) {
@@ -29,9 +26,13 @@ class CreateAccount extends Component {
 			password: props.password
 		};
 	}
-	
+
+  login(){return <Redirect to="/login"/>;};
+
 	render() {
+  // not initial render
 		return (
+
 			<div className="ca-container">
 				<img src={team_logo} className="ca-logo" alt="logo" />
 				<div className="ca-form">
@@ -42,8 +43,14 @@ class CreateAccount extends Component {
 					<div className="ca-form-header">PASSWORD</div>
 					<input id="password" className="ca-form-input" type="text" />
 					<input id="submit" className="ca-form-submit" type="button" value="Register" />
-				</div>
-			</div>
+
+        </div>
+
+
+          </div>
+
+
+
 		);
 	}
 }
