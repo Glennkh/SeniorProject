@@ -78,3 +78,9 @@
 .ca-form-submit:hover {
 	outline:				0;
 }
+
+.ca-navbar{
+	background-color: black;
+	width: 100%;
+	height: 50px;
+}
