@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import team_logo from './inSpect-logo.svg';
 import './App.css';
 import './CreateAccount.css';
@@ -28,4 +27,4 @@ class  Login extends Component {
 		);
 	}
 }
-export {Login};
+export default Login;
