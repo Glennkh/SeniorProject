@@ -8,18 +8,38 @@
   border-color: black;
   width:					100%;
   text-align:				center;
-    text-decoration:		none;
+  text-decoration:		none;
   display:				inline-block;
+  height: 30px;
+  padding-top: 10px;
+}
+
+.sidebar-container{
+  padding: 0px;
+  width: 20%;
+  min-height:				100vh;
+  background: #023158;
+  border-right-color: white;
+  border-right-width: thick;
+  border-right-style:  ridge;
 
 }
+
 .link {
   font-size: 20;
   color:#FFFFFF;
   text-decoration: none;
 }
 
+.link:hover{
+  color: #023158;
+}
+
 .sidebar:hover{
-  background-color: #504f48;
+  background-color: #AAB7C3;
+  border-bottom-style: groove;
+  border-bottom-width: medium;
+  border-bottom-color: black;
 }
 
 

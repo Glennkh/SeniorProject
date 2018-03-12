@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route,Link} from "react-router-dom";
 import "./sidebar.css";
 import Login from "./Login.js";
+import Dashboard from "./Dashboard";
 import team_logo from './inSpect-logo.svg';
 // Each logical "route" has two components, one for
 // the sidebar and one for the main area. We want to
@@ -13,32 +14,30 @@ const routes = [
   {
     path: "/",
     exact: true,
-    sidebar: () => <div>home!</div>,
-    main: () => <h2>Dashboard</h2>
+    main: () => <Dashboard />
   },
   {
     path: "/issues",
-    sidebar: () => <div>bubblegum!</div>,
     main: () => <h2>Issues</h2>
   },
   {
+    path: "/facilities",
+    main: () => <h2>Facilities</h2>
+  },
+  {
     path: "/generate-report",
-    sidebar: () => <div>Generate Reports</div>,
-    main: () => <h2>Generate Reports</h2>,
+    main: () => <h2>Generate Reports</h2>
+  },
+  {
+    path: "/sign-out",
+    main: () => <Login/>
   }
 ];
 
 const Sidebar = () => (
   <Router>
     <div style={{ display: "flex" }}>
-      <div
-        style={{
-          padding: "0px",
-          width: "20%",
-          height: "1000px",
-          background: "#24292B"
-        }}
-      >
+      <div className="sidebar-container"  >
         <div className="sidebar-logo">
           <img src={team_logo} className="ca-logo" alt="logo" />
           <h2>Welcome, user!</h2>
@@ -58,7 +57,17 @@ const Sidebar = () => (
           </li>
           <li>
             <div className="sidebar">
+              <Link to="/facilities" className="link">Facilities</Link>
+            </div>
+          </li>
+          <li>
+            <div className="sidebar">
               <Link to="/generate-report" className="link">Generate Reports</Link>
+            </div>
+          </li>
+          <li>
+            <div className="sidebar">
+              <Link to="/sign-out" className="link">Sign Out</Link>
             </div>
           </li>
         </ul>
